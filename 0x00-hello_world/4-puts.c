@@ -8,11 +8,11 @@
  *
  */
 
-int main(void) 
+int main(void)
 
 {
 
-		puts("\"Programming is like building a multilingual puzzle"); /* Print the string of characters */
+	puts("\"Programming is like building a multilingual puzzle"); /* Prints */
 
 			return (0);
 
