@@ -30,7 +30,7 @@ int main(void)
 
 				/* your code goes there */
 
-					if (n > o)
+					if (n > 0)
 
 					{
 
