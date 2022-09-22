@@ -1,46 +1,52 @@
 #include "main.h"
-/**
- * cap_string - capitalizes all words of a string
- * @a: char to capitalizes
- * Return: a
- */
-char *cap_string(char *a)
-{
-	int i = 0, j = 0;
 
-	while (a[j])
+/**
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length as integer
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+	while (*(s + len) != '\0')
 	{
-		j++;
+		len++;
 	}
-	if (j > 0)
+	return (len);
+}
+
+/**
+ * cap_string - function that capitalizes all words of a string
+ * @str: string to capialize
+ * Return: the capitaized string
+ */
+
+char *cap_string(char *)
+{
+	int index = 0;
+	while (str[++index])
 	{
-		if (a[0] >= 97 && a[0] <= 122)
+		while (!(str[index] >= 'a') && (str[index] <= 'z'))
 		{
-			*(a + i + 1) = *(a + i + 1) - 32;
+			index++;
 		}
-		else
+		if (str[index-1] == ' ' ||
+				str[index-1] == '\t' ||
+				str[index-1] == '\n' ||
+				str[index-1] == ',' ||
+				str[index-1] == ';' ||
+				str[index-1] == '.' ||
+				str[index-1] == '!' ||
+				str[index-1] == '?' ||
+				str[index-1] == '"' ||
+				str[index-1] == '(' ||
+				str[index-1] == ')' ||
+				str[index-1] == '{' ||
+				str[index-1] == '}' )
 		{
-			a[i + 1] = a[i + 1];
+			str[index] -= 32;
 		}
-		while (a[i])
-		{
-			if (a[i] == ',' || a[i] == ';' || a[i] == '.' ||
-				a[i] == '!' || a[i] == '?' || a[i] == '"' ||
-				a[i] == '(' || a[i] == ')' || a[i] == '{' ||
-				a[i] == '}' || a[i] == 32 || a[i] == 9 ||
-				a[i] == '\n')
-			{
-				if (a[i + 1] >= 97  && a[i + 1] <= 122)
-				{
-					*(a + i + 1) = *(a + i + 1) - 32;
-				}
-				else
-				{
-					a[i + 1] = a[i + 1];
-				}
-			}
-			i++;
-		}
+		return (str);
 	}
-	return (a);
 }
