@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int len = 0;
+
 	while (*(s + len) != '\0')
 	{
 		len++;
@@ -22,28 +23,29 @@ int _strlen(char *s)
  * Return: the capitaized string
  */
 
-char *cap_string(char *)
+char *cap_string(char *str)
 {
 	int index = 0;
+
 	while (str[++index])
 	{
 		while (!(str[index] >= 'a') && (str[index] <= 'z'))
 		{
 			index++;
 		}
-		if (str[index-1] == ' ' ||
-				str[index-1] == '\t' ||
-				str[index-1] == '\n' ||
-				str[index-1] == ',' ||
-				str[index-1] == ';' ||
-				str[index-1] == '.' ||
-				str[index-1] == '!' ||
-				str[index-1] == '?' ||
-				str[index-1] == '"' ||
-				str[index-1] == '(' ||
-				str[index-1] == ')' ||
-				str[index-1] == '{' ||
-				str[index-1] == '}' )
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
 		{
 			str[index] -= 32;
 		}
