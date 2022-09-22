@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length as integer
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*(s + len) != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
-
-/**
  * cap_string - function that capitalizes all words of a string
  * @str: string to capialize
  * Return: the capitaized string
@@ -27,9 +10,9 @@ char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (str[++index])
+	while (str[index])
 	{
-		while ((str[index] >= 'a') && (str[index] <= 'z'))
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
 		{
 			index++;
 		}
@@ -45,7 +28,8 @@ char *cap_string(char *str)
 				str[index - 1] == '(' ||
 				str[index - 1] == ')' ||
 				str[index - 1] == '{' ||
-				str[index - 1] == '}')
+				str[index - 1] == '}' ||
+				index == 0;)
 		{
 			str[index] -= 32;
 		}
