@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main - program prints a[2] = 98, followed by a new line
+ * @n: is an integer
+ * @a: is ann array
+ * @p: is a pointer
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
