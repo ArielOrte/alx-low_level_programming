@@ -29,7 +29,7 @@ char *cap_string(char *str)
 
 	while (str[++index])
 	{
-		while (!(str[index] >= 'a') && (str[index] <= 'z'))
+		while ((str[index] >= 'a') && (str[index] <= 'z'))
 		{
 			index++;
 		}
