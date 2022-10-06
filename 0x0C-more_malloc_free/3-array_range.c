@@ -10,24 +10,24 @@
 
 int *array_range(int min, int max)
 {
-	int range, i;
-	int *ptr;
+	int *ptr, i = 0;
 
-	range = 0;
 	if (min > max)
 	{
 		return (NULL);
 	}
-	range = ((max + 1) - min);
-	ptr = malloc(range * sizeof(int));
+
+	ptr = malloc((sizeof(int) * (max - min)) + sizeof(int));
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < range; i++)
+	while (min <= max)
 	{
-		*(ptr + 1) = min + 1;
+		ptr[i] = min;
+		i++;
+		min++;
 	}
 	return (ptr);
 }
