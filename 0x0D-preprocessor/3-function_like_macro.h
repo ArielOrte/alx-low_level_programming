@@ -1,6 +1,6 @@
-#ifndef ABSO
-#define ABSO
+#ifndef FUNCITION_LIKE_MACRO_H
+#define FUNCITION_LIKE_MACRO_H
 
-#define ABS(X) (((x) < (0) ? (-(x) : (x))
+#define ABS(X) ((x < 0) ? (x) * (-1) : (x))
 
-#endif /* ABS(X) */
+#endif
