@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "3-calc.h"
 
 /**
  * main - perfoms the operations
@@ -11,11 +12,10 @@
 int main(int argc, char *argv[])
 {
 	int b, i;
-	char *a;
 
 	if (argc != 2)
 	{
-		_putchar("Error\n");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -23,19 +23,21 @@ int main(int argc, char *argv[])
 
 	if (b < 0)
 	{
-		_putchar("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
-	a = (char *)main;
 
 	for (i = 0; i < b; i++)
 	{
-		if (i == b - 1)
+		printf("%02hhx", *((char *)main + i));
+		if (i < b - 1)
 		{
-			_putchar("%02hhx\n", a[i]);
-			break;
+			printf(" ");
 		}
-		_putchar("%02hhx\n", a[i]);
+		else
+		{
+		printf("\n");
+		}
 	}
 
 	return (0);
