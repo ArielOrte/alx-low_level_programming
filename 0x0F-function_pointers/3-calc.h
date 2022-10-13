@@ -15,7 +15,6 @@ int op_mod(int a, int b);
  * @f: The function associated
  */
 typedef struct op
-
 {
 	char *op;
 	int (*f)(int a, int b);
