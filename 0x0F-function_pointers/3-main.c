@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	result = func(arg1, arg2);
+	ans = func(arg1, arg2);
 
-	printf("%d\n", result);
+	printf("%d\n", ans);
 
 	return (0);
 }
