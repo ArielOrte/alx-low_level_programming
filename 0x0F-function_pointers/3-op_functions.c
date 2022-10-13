@@ -6,7 +6,7 @@
  * op_add - calculates the sum of two integers
  * @a: first integer
  * @b: second integer
- * Return: a + b
+ * Return: the sum
  */
 
 int op_add(int a, int b)
@@ -18,7 +18,7 @@ int op_add(int a, int b)
  * op_sub - calculates the difference
  * @a: first integer
  * @b: second integer
- * Return: a - b
+ * Return: the difference
  */
 
 int op_sub(int a, int b)
@@ -30,7 +30,7 @@ int op_sub(int a, int b)
  * op_mul - multiplies the two numbers
  * @a: first integer
  * @b: second integer
- * Return: a * b
+ * Return: the product
  */
 
 int op_mul(int a, int b)
