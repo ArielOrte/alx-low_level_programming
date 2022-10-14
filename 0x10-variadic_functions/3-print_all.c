@@ -18,8 +18,8 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 	sep = "";
-	i = 0;
 
+	i = 0;
 	while (format && format[i])
 	{
 		switch (format[i])
@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(arg, char *);
-					if (!str)
+					if (str == NULL)
 						str = "(nil)";
 					printf("%s%s", sep, str);
 					break;
