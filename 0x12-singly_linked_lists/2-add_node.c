@@ -11,7 +11,6 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
-	size_t n;
 
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
@@ -26,11 +25,22 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	for (n = 0; str[n]; n++)
-	{
-		new_node->len = n;
-		new_node->next = *head;
-		*head = new_node;
-	}
+	new_node->len = _strlen1(new_node->str);
+	new_node->next = *head;
+	*head = new_node;
 	return (new_node);
+}
+
+/**
+ * _strlen1 - returns the length of a string
+ * @s: string
+ * Return: length of @s
+ */
+
+int _strlen1(char *s)
+{
+	if (*s == 0)
+		return (0);
+	else
+		return (1 + _strlen1(s + 1));
 }
